@@ -3,4 +3,113 @@
 @tailwind utilities;
 
 @layer utilities {
+  a {
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 4px;
+    background: transparent;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 4px;
+    width: 0%;
+    @apply bg-purple-400;
+  }
+  h1 .post-title {
+    width: 100%;
+    min-height: 2em;
+    background-color: #eee;
+  }
+
+  h1 {
+    box-sizing: border-box;
+    transition: background-color 0.25s;
+  }
+
+  html:not([data-scroll="0"]) body {
+    padding-top: 3em;
+  }
+
+  html:not([data-scroll="0"]) h1 {
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.2em;
+    padding-left: 0.8em;
+    /* box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @apply text-gray-500;
+  }
+
+  .post-footer {
+    margin-bottom: -10px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+  }
+
+  .footer-links a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #a78bfa;
+    margin: 0 2em 0 2em;
+  }
+
+  #post-title {
+    --ease: all 300ms ease;
+    z-index: 100;
+    background: pink;
+    height: 72px;
+    width: 100%;
+    opacity: 0.5;
+    transition: var(--ease);
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+
+  .excerpt p:nth-of-type(1) {
+    @apply text-purple-400;
+    @apply mb-2;
+    @apply py-1;
+    @apply rounded-md;
+    @apply md:w-3/4;
+    @apply font-sans;
+    @apply text-base;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .excerpt p:nth-of-type(2) {
+    border-top: 2px dotted;
+    @apply border-purple-200;
+    @apply pt-3;
+  }
+  .excerpt p {
+    @apply font-serif;
+    @apply md:px-4;
+  }
+  .excerpt h1 {
+    @apply md:text-3xl;
+    @apply text-2xl;
+  }
+  .excerpt h2,
+  h3 {
+    @apply my-2;
+    @apply md:text-2xl;
+    @apply text-xl;
+    @apply tracking-wide;
+    @apply md:px-4;
+  }
 }

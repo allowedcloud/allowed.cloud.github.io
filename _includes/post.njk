@@ -1,0 +1,43 @@
+---
+layout: default.njk
+---
+<div id="content" class="grid">
+  <article class="grid place-content-center text-lg p-4 md:p-16 z-20 pb-12 mb-48 bg-white">
+    <h1 class="post-title text-2xl lg:text-3xl sticky top-0 bg-white">
+      {{ title }}
+    </h1>
+    <div class="grid grid-cols">
+      <div class="flex flex-row items-center">
+        <div class="text-gray-200 mr-2">
+          <svg viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <path d="M3.5 0v5m8-5v5m-10-2.5h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z" stroke="currentColor"></path>
+          </svg>
+        </div>
+        <time datetime="{{ post.date | dateIso }}" class="text-gray-300 text-sm pt-1">{{ post.date | dateReadable }}</time>
+      </div>
+    </div>
+    <div class="excerpt max-w-prose text-gray-600 md:text-xl">
+      {{ content | safe }}
+    </div>
+  </article>
+  <footer class="post-footer h-52 bottom-0 z-0 py-4 bg-gray-50">
+    <div class="grid h-40 place-items-center">
+      <div class="footer-links grid grid-cols-2 text-gray-400 text-xl justify-center">
+        <a href="/" title="Home">Home</a>
+        <a href="/twitter" title="Twitter">Twitter</a>
+        <a href="/about" title="About">About</a>
+        <a href="email" title="Email">Email</a>
+        <a href="/projects" title="Projects">Projects</a>
+        <a href="/github" title="Github">Github</a>
+      </div>
+    </div>
+    <div class="fixed bottom-2 w-full text-center text-gray-300">
+      <p class="text-sm">
+        @AllowedCloud · 2021
+      </p>
+    </div>
+  </footer>
+  <div class="progress-container fixed bottom-0 z-50">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div 
