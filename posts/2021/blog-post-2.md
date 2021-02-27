@@ -13,7 +13,7 @@ This will not be on the homepage.
 Buy the latest and greatest cryptocurrency that no-one has heard of.
  
 ## Legal Stuff
-We do not accept any liability for any loss or damage.
+We do not accept any liability for ANY loss or damage.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec urna id nisl tincidunt pharetra sed nec velit. Aenean orci mi, placerat et enim eu, suscipit tempor erat. Proin vestibulum fringilla egestas. Nam eu facilisis tellus. Nam vitae tellus sollicitudin, luctus odio eu, placerat dolor. Ut vestibulum iaculis suscipit. In auctor ex ac ultrices lacinia. Pellentesque elementum risus id nulla tempus, quis sagittis justo vehicula. Maecenas dolor ex, suscipit non ultricies sit amet, malesuada quis neque. Suspendisse tincidunt laoreet eros ut blandit. Proin vestibulum luctus urna in tempus. Ut accumsan ac felis ut congue. Suspendisse quam purus, ullamcorper quis sodales ut, cursus et libero.
 
