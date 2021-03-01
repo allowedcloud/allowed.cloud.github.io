@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss styles/tailwind.css --o docs/style.css && cleancss docs/style.css -o docs/style.css"
+    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss styles/tailwind.css --o docs/style.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
