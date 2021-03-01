@@ -36,9 +36,7 @@ module.exports = function (eleventyConfig) {
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
 
-  eleventyConfig.addPassthroughCopy({
-    "./scripts": "/",
-  })
+  eleventyConfig.addPassthroughCopy({ "./scripts": "/", });
 
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
