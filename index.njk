@@ -11,14 +11,20 @@ pagination:
   <div class="flex flex-col p-6 md:m-16 lg:grid lg:place-content-center">
     <h1 class="text-4xl font-bold text-purple-400">Hello!</h1>
     <p class="text-gray-600 p-1 my-2 max-w-prose">
-      As a recently accredited AWS Solutions Architect, I thought it would be beneficial to detail my journey through the ecosystem. For the past couple of years I've taught elementary school children STEAM programs. From this I discovered that the best way to learn something is by teaching it to others. Now I begin a new journey through the clouds, which I intend to write about what I learn along the way.
+    As a recently accredited AWS Solutions Architect, I thought it'd be beneficial to detail my journey
+    through the ecosystem. From past experiences, I've discovered it's helpful when learning about things
+    to write and teach other people about them. The goal for this web site is to be part journal,
+    part instruction. I plan to document what I learn and what I know in an effort at improving my 
+    own understanding. Maybe if I do a good enough job, you'll learn something new!
     </p>
-    <h3 class="text-xl text-purple-400 p-1">Things I write about</h3>
-    <ul class="text-gray-500 list-disc list-inside ml-4 font-mono">
+    <h3 class="text-xl text-purple-400 p-1">
+      Topics I write about
+    </h3>
+    <ul class="text-gray-600 list-disc list-inside ml-4 font-mono">
       <li>Amazon Web Services</li>
       <li>Information security</li>
-      <li>Software development</li>
-      <li>Unix systems</li>
+      <li>Web app development</li>
+      <li>Unix</li>
     </ul>
     <p class="text-purple-400 text-xs uppercase mt-8 mb-4">Latest Posts</p>
     {% for post in posts %}
@@ -28,15 +34,15 @@ pagination:
             <a href="{{ post.url | url }}">{{ post.data.title }}</a>
           </h1>
           <div class="flex flex-row items-center my-1">
-            <div class="text-gray-200 mr-2">
+            <div class="text-gray-300 mr-2">
               <svg viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
                 <path d="M3.5 0v5m8-5v5m-10-2.5h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z" stroke="currentColor"></path>
               </svg>
             </div>
-            <time datetime="{{ post.date | dateIso }}" class="text-gray-300 text-sm pt-1">{{ post.date | dateReadable }}</time>
+            <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
           </div>
         </div>
-        <div class="text-gray-400">
+        <div class="text-gray-500">
           {% excerpt post %}
         </div>
       </article>

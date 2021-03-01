@@ -8,15 +8,15 @@ layout: default.njk
     </h1>
     <div class="grid grid-cols">
       <div class="flex flex-row items-center">
-        <div class="text-gray-200 mr-2">
+        <div class="text-gray-300 mr-2">
           <svg viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
             <path d="M3.5 0v5m8-5v5m-10-2.5h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z" stroke="currentColor"></path>
           </svg>
         </div>
-        <time datetime="{{ post.date | dateIso }}" class="text-gray-300 text-sm pt-1">{{ post.date | dateReadable }}</time>
+        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
       </div>
     </div>
-    <div class="excerpt max-w-prose text-gray-600 md:text-xl">
+    <div class="excerpt max-w-prose text-gray-800 md:text-xl">
       {{ content | safe }}
     </div>
   </article>
@@ -33,7 +33,7 @@ layout: default.njk
     </div>
     <div class="fixed bottom-2 w-full text-center text-gray-300">
       <p class="text-sm">
-        @AllowedCloud · 2021
+        AllowedCloud · 2021
       </p>
     </div>
   </footer>
