@@ -22,6 +22,8 @@
     width: 0%;
     @apply bg-purple-400;
   }
+
+  /*
   h1 .post-title {
     width: 100%;
     min-height: 2em;
@@ -46,10 +48,10 @@
     background-color: #fff;
     padding: 0.2em;
     padding-left: 0.8em;
-    /* box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3); */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     @apply text-gray-500;
   }
+  */
 
   .post-footer {
     margin-bottom: -10px;
