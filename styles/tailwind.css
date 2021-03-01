@@ -95,12 +95,13 @@
   }
   .excerpt p:nth-of-type(2) {
     border-top: 2px dotted;
-    @apply border-purple-200;
+    @apply border-purple-300;
     @apply pt-3;
   }
   .excerpt p {
     @apply font-serif;
     @apply md:px-4;
+    line-height: 1.5;
   }
   .excerpt h1 {
     @apply md:text-3xl;
@@ -113,5 +114,10 @@
     @apply text-xl;
     @apply tracking-wide;
     @apply md:px-4;
+  }
+  .excerpt a {
+    @apply text-purple-400;
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
 }
