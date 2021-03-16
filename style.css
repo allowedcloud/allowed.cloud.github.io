@@ -649,6 +649,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -775,10 +779,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .gap-4 {
