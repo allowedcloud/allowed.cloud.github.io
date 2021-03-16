@@ -15,9 +15,9 @@ layout: default.njk
         </div>
         <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
       </div>
-      <div class="flex gap-4 mt-1">
+      <div class="flex mt-3">
         {% for tag in tags %}
-          <a href="/tags/{{ tag }}" class="tags">
+          <a href="/tags/{{ tag }}" class="tags mr-2">
             {{ tag }}
           </a>
         {% endfor %}
@@ -39,7 +39,7 @@ layout: default.njk
     </div>
     <div class="fixed bottom-2 w-full text-center text-gray-300">
       <p class="text-sm">
-        AllowedCloud · 2021
+        Allowed Cloud · 2021
       </p>
     </div>
   </footer>

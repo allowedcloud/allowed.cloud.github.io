@@ -1,6 +1,7 @@
 const htmlmin = require("html-minifier");
 const moment = require('moment');
- 
+const typesetPlugin = require('eleventy-plugin-typeset');
+
 moment.locale('en');
 
 module.exports = function (eleventyConfig) {
@@ -55,6 +56,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/hover.css/css/hover-min.css": "assets/hover.css"
   });
+
+  module.exports = (eleventyConfig) => {
+    eleventyConfig.addPlugin(typesetPlugin({
+      only: '.exerpt',
+    }));
+  };
 
   return {
     dir: {
