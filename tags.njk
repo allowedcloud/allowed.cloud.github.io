@@ -1,0 +1,21 @@
+---
+layout: default.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+<div class="grid place-content-center h-screen">
+  <h1 class="text-4xl text-gray-400">Tagged “{{ tag }}”</h1>
+
+  <ol class="my-2">
+    {% set taglist = collections[tag] %}
+    {% for post in taglist | reverse %}
+      <li class="flex gap-2 items-end">
+        <a href="{{ post.url | url }}" class="text-xl underline">{{ post.data.title }}</a>
+        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

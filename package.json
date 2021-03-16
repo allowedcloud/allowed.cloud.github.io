@@ -17,5 +17,9 @@
     "moment": "^2.29.1",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.3"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "hover.css": "^2.3.2"
   }
 }

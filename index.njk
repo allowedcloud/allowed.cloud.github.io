@@ -1,7 +1,7 @@
 ---
 layout: default.njk
 pagination:
-  data: collections.post
+  data: collections.general
   size: 10
   reverse: true
   alias: posts
@@ -9,28 +9,24 @@ pagination:
 
 {% block content %}
   <div class="flex flex-col p-6 md:m-16 lg:grid lg:place-content-center">
-    <h1 class="text-4xl font-bold text-purple-400">Hello!</h1>
+    <h1 class="text-4xl font-bold text-purple-400 animate__animated animate__bounce">Hello!</h1>
     <p class="text-gray-600 p-1 my-2 max-w-prose">
-    As a recently accredited AWS Solutions Architect, I thought it'd be beneficial to detail my journey
-    through the ecosystem. From past experiences, I've discovered it's helpful when learning about things
-    to write and teach other people about them. The goal for this web site is to be part journal,
-    part instruction. I plan to document what I learn and what I know in an effort at improving my 
-    own understanding. Maybe if I do a good enough job, you'll learn something new!
+      As a recently accredited AWS Solutions Architect, I thought it'd be beneficial to detail my journey through the ecosystem. From past experiences, I've discovered it's helpful when learning about things to write and teach other people about them. The goal for this web site is to be part journal, part instruction. I plan to document what I learn and what I know in an effort at improving my own understanding. Maybe if I do a good enough job, you'll learn something new!
     </p>
     <h3 class="text-xl text-purple-400 p-1">
       Topics I write about
     </h3>
     <ul class="text-gray-600 list-disc list-inside ml-4 font-mono">
       <li>Amazon Web Services</li>
+      <li>Web development</li>
       <li>Information security</li>
-      <li>Web app development</li>
       <li>Unix</li>
     </ul>
     <p class="text-purple-400 text-xs uppercase mt-8 mb-4">Latest Posts</p>
     {% for post in posts %}
       <article class="mb-4">
         <div class="flex flex-col items-baseline">
-          <h1 class="text-xl font-semibold">
+          <h1 class="text-xl font-semibold hvr-underline-reveal text-gray-800">
             <a href="{{ post.url | url }}">{{ post.data.title }}</a>
           </h1>
           <div class="flex flex-row items-center my-1">

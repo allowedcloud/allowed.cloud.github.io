@@ -189,6 +189,11 @@ alpinejs@^2.8.1:
   resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-2.8.1.tgz#22703776639b0b2f68d619856907de9fbbd727be"
   integrity sha512-ETJ/k0fbiBeP+OSd5Fhj70c+zb+YRzcVbyh5DVeLT3FBWMUeUvjOSWLi53IVLPSehaT2SKmB7w08WGF2jYTqNA==
 
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -1316,6 +1321,11 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hover.css@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/hover.css/-/hover.css-2.3.2.tgz#f07193d9c7409d4e395134d3b2215b99eb55e0d3"
+  integrity sha1-8HGT2cdAnU45UTTTsiFbmetV4NM=
 
 html-minifier@^4.0.0:
   version "4.0.0"

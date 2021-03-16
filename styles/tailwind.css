@@ -7,7 +7,7 @@
     -webkit-tap-highlight-color: transparent; /* for removing the highlight */
   }
   a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
   /* The progress container (grey background) */
   .progress-container {
@@ -52,7 +52,17 @@
     @apply text-gray-500;
   }
   */
-
+  .tags {
+    @apply text-sm;
+    @apply text-gray-400;
+    @apply rounded-full;
+    border: 1px solid #9ca3af;
+    padding: 0 6px;
+    margin: 3px 0 0 0;
+  }
+  .tags:hover {
+    text-decoration: none;
+  }
   .post-footer {
     margin-bottom: -10px;
     width: 100%;
@@ -119,5 +129,11 @@
     @apply text-purple-400;
     text-decoration: underline;
     text-decoration-style: dotted;
+  }
+
+  /* hover.css custom styles */
+
+  .hvr-underline-reveal:before {
+    background: #1f2937 !important;
   }
 }

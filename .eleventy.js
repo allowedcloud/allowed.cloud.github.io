@@ -48,6 +48,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "static": "/" });
 
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/animate.css/animate.min.css": "assets/animate.min.css"
+  });
+
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/hover.css/css/hover-min.css": "assets/hover.css"
+  });
+
   return {
     dir: {
       output: 'docs'
