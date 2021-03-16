@@ -133,7 +133,7 @@
 
   /* hover.css custom styles */
 
-  .hvr-underline-reveal:before {
+  .hvr-underline-from-left:before {
     background: #1f2937 !important;
   }
 }

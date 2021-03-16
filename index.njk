@@ -9,7 +9,7 @@ pagination:
 
 {% block content %}
   <div class="flex flex-col p-6 md:m-16 lg:grid lg:place-content-center">
-    <h1 class="text-4xl font-bold text-purple-400 animate__animated animate__bounce">Hello!</h1>
+    <h1 class="text-4xl font-bold text-purple-400 animate__animated animate__flipInX">Hello!</h1>
     <p class="text-gray-600 p-1 my-2 max-w-prose">
       As a recently accredited AWS Solutions Architect, I thought it'd be beneficial to detail my journey through the ecosystem. From past experiences, I've discovered it's helpful when learning about things to write and teach other people about them. The goal for this web site is to be part journal, part instruction. I plan to document what I learn and what I know in an effort at improving my own understanding. Maybe if I do a good enough job, you'll learn something new!
     </p>
@@ -26,7 +26,7 @@ pagination:
     {% for post in posts %}
       <article class="mb-4">
         <div class="flex flex-col items-baseline">
-          <h1 class="text-xl font-semibold hvr-underline-reveal text-gray-800">
+          <h1 class="text-xl font-semibold hvr-underline-from-left text-gray-800">
             <a href="{{ post.url | url }}">{{ post.data.title }}</a>
           </h1>
           <div class="flex flex-row items-center my-1">
