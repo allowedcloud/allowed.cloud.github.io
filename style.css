@@ -553,6 +553,10 @@ video {
   place-content: center;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -583,6 +587,10 @@ video {
 
 .h-52 {
   height: 13rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .text-xs {
@@ -631,6 +639,10 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mr-2 {
@@ -745,6 +757,10 @@ video {
   text-transform: uppercase;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .w-full {
   width: 100%;
 }
@@ -759,6 +775,14 @@ video {
 
 .z-50 {
   z-index: 50;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .grid-cols-2 {
@@ -836,7 +860,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* The progress container (grey background) */
@@ -885,6 +909,21 @@ a:hover {
     @apply text-gray-500;
   }
   */
+
+.tags {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+  border-radius: 9999px;
+  border: 1px solid #9ca3af;
+  padding: 0 6px;
+  margin: 3px 0 0 0;
+}
+
+.tags:hover {
+  text-decoration: none;
+}
 
 .post-footer {
   margin-bottom: -10px;
@@ -1004,6 +1043,12 @@ a:hover {
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
+}
+
+/* hover.css custom styles */
+
+.hvr-underline-reveal:before {
+  background: #1f2937 !important;
 }
 
 @media (min-width: 640px) {
