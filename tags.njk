@@ -12,9 +12,9 @@ permalink: /tags/{{ tag }}/
   <ol class="my-2">
     {% set taglist = collections[tag] %}
     {% for post in taglist | reverse %}
-      <li class="flex gap-2 items-end">
+      <li class="flex items-end">
         <a href="{{ post.url | url }}" class="text-xl underline">{{ post.data.title }}</a>
-        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
+        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1 ml-2">{{ post.date | dateReadable }}</time>
       </li>
     {% endfor %}
   </ol>
