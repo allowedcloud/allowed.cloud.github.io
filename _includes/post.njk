@@ -17,13 +17,13 @@ layout: default.njk
       </div>
       <div class="flex mt-3">
         {% for tag in tags %}
-          <a href="/tags/{{ tag }}" class="tags mr-2">
+          <a href="/tags/{{ tag }}" class="tags">
             {{ tag }}
           </a>
         {% endfor %}
       </div>
     </div>
-    <div class="excerpt max-w-prose text-gray-800 md:text-xl">
+    <div class="post-text max-w-prose text-gray-800 md:text-xl">
       {{ content | safe }}
     </div>
   </article>

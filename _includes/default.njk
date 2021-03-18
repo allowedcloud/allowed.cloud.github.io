@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      {% block title %}AllowedCloud{% endblock %}
-    </title>
-    <meta charset="UTF-8"/>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    <link rel="stylesheet" href="{{" /assets/animate.min.css" | url }}"/>
-    <link rel="stylesheet" href="{{" /assets/hover.css" | url }}"/>
-    {% block head %}{% endblock %}
-    <script src="/js/alpine.js?v={% version %}"></script>
-    <script src="/scroll-progress.js"></script>
-    <!-- <script src="/post-title.js"></script> -->
+    {% block head %}
+      <title>
+        {% block title %}AllowedCloud{% endblock %}
+      </title>
+      <meta charset="UTF-8"/>
+      {% if description %}
+        <meta name="description" content="{{description}}"/>
+      {% endif %}
+      <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+      <link rel="stylesheet" href="/style.css?v={% version %}"/>
+      <link rel="stylesheet" href="{{" /assets/animate.min.css" | url }}"/>
+      <link rel="stylesheet" href="{{" /assets/hover.css" | url }}"/>
+      <link rel="stylesheet" href="/prism-material-light.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+      <script src="/js/alpine.js?v={% version %}"></script>
+      <script src="/scroll-progress.js"></script>
+      <!-- <script src="/post-title.js"></script> -->
+    {% endblock %}
+
   </head>
   <body>
     {% block content %}

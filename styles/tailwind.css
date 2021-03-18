@@ -52,11 +52,14 @@
     @apply text-gray-500;
   }
   */
+
+  /*  */
+  /* Tags */
+  /*  */
   .tags {
     @apply text-sm;
     @apply text-gray-400;
     @apply rounded-full;
-    @apply shadow-sm;
     border: 1px solid #9ca3af;
     padding: 4px 8px;
     margin: 3px 0 0 0;
@@ -64,6 +67,14 @@
   .tags:hover {
     text-decoration: none;
   }
+
+  .tags {
+    margin-right: 10px;
+  }
+
+  /*  */
+  /* Footer */
+  /*  */
   .post-footer {
     margin-bottom: -10px;
     width: 100%;
@@ -78,6 +89,9 @@
     margin: 0 2em 0 2em;
   }
 
+  /*  */
+  /* Post Formatting */
+  /*  */
   #post-title {
     --ease: all 300ms ease;
     z-index: 100;
@@ -88,11 +102,7 @@
     transition: var(--ease);
   }
 
-  .fade-in {
-    opacity: 1;
-  }
-
-  .excerpt p:nth-of-type(1) {
+  .post-text p:nth-of-type(1) {
     @apply text-purple-400;
     @apply rounded-md;
     @apply md:w-3/4;
@@ -102,38 +112,69 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .excerpt p:nth-of-type(2) {
+  .post-text p:nth-of-type(2) {
     border-top: 2px dotted;
     @apply border-purple-300;
     @apply pt-4;
   }
-  .excerpt p {
+  .post-text p {
     @apply font-serif;
-    @apply md:px-4;
     @apply my-4;
     line-height: 1.5;
   }
-  .excerpt h1 {
+  .post-text h1 {
     @apply md:text-3xl;
+    @apply text-3xl;
+  }
+  .post-text h2 {
     @apply text-2xl;
   }
-  .excerpt h2,
-  h3 {
-    @apply my-2;
-    @apply md:text-2xl;
+
+  .post-text h3 {
     @apply text-xl;
-    @apply tracking-wide;
-    @apply md:px-4;
   }
-  .excerpt a {
+
+  .post-text h1,
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+  .post-text a {
     @apply text-purple-400;
     text-decoration: underline;
     text-decoration-style: dotted;
   }
 
-  /* hover.css custom styles */
+  .post-text blockquote {
+    @apply bg-purple-100;
+    @apply text-purple-600;
+    @apply rounded-md;
+    @apply py-1;
+    @apply px-2;
+    @apply mx-2;
+  }
 
+  .post-text code {
+    @apply bg-gray-100;
+    @apply rounded;
+    padding: 2px;
+  }
+
+  /*  */
+  /*  */
+  /* hover.css custom styles */
   .hvr-underline-from-left:before {
     background: #1f2937 !important;
+  }
+
+  /*  */
+  /* Syntax Highlight */
+  /*  */
+  .post-text code {
+    font-family: "JetBrains Mono", monospace !important;
+    @apply text-base !important;
+  }
+  .post-text pre {
+    @apply rounded-md;
   }
 }

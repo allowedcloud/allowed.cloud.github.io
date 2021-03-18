@@ -1,21 +1,57 @@
 const htmlmin = require("html-minifier");
 const moment = require('moment');
 const typesetPlugin = require('eleventy-plugin-typeset');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 moment.locale('en');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setUseGitIgnore(false);
+  // Passthrough
 
-  eleventyConfig.addWatchTarget("./_tmp/style.css");
-
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
+  });
+  eleventyConfig.addPassthroughCopy({ "./scripts": "/", });
+  eleventyConfig.addFilter('dateIso', date => {
+    return moment(date).toISOString();
+  });
+  eleventyConfig.addFilter('dateReadable', date => {
+    return moment(date).utc().format('LL'); // E.g. May 31, 2019
+  });
+  eleventyConfig.addPassthroughCopy({ "static": "/" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/animate.css/animate.min.css": "assets/animate.min.css"
+  });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/hover.css/css/hover-min.css": "assets/hover.css"
+  });
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
+
+  // Plugins
+
+  eleventyConfig.addPlugin(typesetPlugin({
+    only: '.exerpt',
+  }));
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Shortcodes
+
+  eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
 
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
 
-  eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
+
+  // Other
+
+  eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.addWatchTarget("./_tmp/style.css");
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
@@ -32,36 +68,6 @@ module.exports = function (eleventyConfig) {
     }
     return content;
   });
-
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
-  });
-
-  eleventyConfig.addPassthroughCopy({ "./scripts": "/", });
-
-  eleventyConfig.addFilter('dateIso', date => {
-    return moment(date).toISOString();
-  });
- 
-  eleventyConfig.addFilter('dateReadable', date => {
-    return moment(date).utc().format('LL'); // E.g. May 31, 2019
-  });
-
-  eleventyConfig.addPassthroughCopy({ "static": "/" });
-
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/animate.css/animate.min.css": "assets/animate.min.css"
-  });
-
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/hover.css/css/hover-min.css": "assets/hover.css"
-  });
-
-  module.exports = (eleventyConfig) => {
-    eleventyConfig.addPlugin(typesetPlugin({
-      only: '.exerpt',
-    }));
-  };
 
   return {
     dir: {
