@@ -5,7 +5,7 @@ date: 2021-03-16
 tags: ['general']
 ---
 
-<!-- Start Excerpt -->
+<!-- Excerpt Start -->
 Hello world! A brief introduction of me and what's going on around here.
 <!-- Excerpt End -->
 

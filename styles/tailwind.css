@@ -161,6 +161,16 @@
   }
 
   /*  */
+  /* Breadcrumbs */
+  /*  */
+  /* .breadcrumbs ul {
+    display: inline;
+  }
+  .breadcrumbs ul > li {
+    display: inline;
+  } */
+
+  /*  */
   /*  */
   /* hover.css custom styles */
   .hvr-underline-from-left:before {

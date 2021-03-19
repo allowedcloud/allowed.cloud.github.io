@@ -1,7 +1,6 @@
 const htmlmin = require("html-minifier");
 const moment = require('moment');
 const typesetPlugin = require('eleventy-plugin-typeset');
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 moment.locale('en');
@@ -33,8 +32,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(typesetPlugin({
     only: '.exerpt',
   }));
-
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addPlugin(syntaxHighlight);
 

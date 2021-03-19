@@ -24,6 +24,16 @@
 
   </head>
   <body>
+    <div class="flex flex-row flex-nowrap justify-end place-items-center m-3 text-sm">
+      <a href="/about" class="mx-1 underline text-gray-700">About</a>
+      <a href="/posts" class="mx-1 underline text-gray-700">Posts</a>
+      <a href="/posts" class="mx-1 underline text-gray-700">Projects</a>
+      <a href="/posts" class="mx-1 underline text-gray-700">Contact</a>
+
+      <a href="/" class="bg-purple-100 p-1 ml-1 rounded-md">
+        <img src="/images/home.svg" alt="Home" title="Home"/>
+      </a>
+    </div>
     {% block content %}
       {{ content | safe }}
     {% endblock %}

@@ -1,0 +1,32 @@
+---
+layout: default.njk
+pagination:
+  data: collections.general
+  size: 10
+  reverse: true
+  alias: posts
+---
+
+<div class="flex flex-col p-6 md:m-16 lg:grid lg:place-content-center">
+  <p class="text-purple-400 text-xs uppercase mt-8 mb-4">Latest Posts</p>
+  {% for post in posts %}
+    <article class="mb-4">
+      <div class="flex flex-col items-baseline">
+        <h1 class="text-xl font-semibold hvr-underline-from-left text-gray-800">
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h1>
+        <div class="flex flex-row items-center my-1">
+          <div class="text-gray-300 mr-2">
+            <svg viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+              <path d="M3.5 0v5m8-5v5m-10-2.5h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z" stroke="currentColor"></path>
+            </svg>
+          </div>
+          <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
+        </div>
+      </div>
+      <div class="text-gray-500 md:w-1/2">
+        {% excerpt post %}
+      </div>
+    </article>
+  {% endfor %}
+</div>
