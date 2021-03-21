@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  a {
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+  }
+  a:hover {
+    /* text-decoration: underline; */
+  }
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 4px;
+    background: transparent;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 4px;
+    width: 0%;
+    @apply bg-purple-400;
+  }
+
+  /*
+  h1 .post-title {
+    width: 100%;
+    min-height: 2em;
+    background-color: #eee;
+  }
+
+  h1 {
+    box-sizing: border-box;
+    transition: background-color 0.25s;
+  }
+
+  html:not([data-scroll="0"]) body {
+    padding-top: 3em;
+  }
+
+  html:not([data-scroll="0"]) h1 {
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.2em;
+    padding-left: 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @apply text-gray-500;
+  }
+  */
+
+  /*  */
+  /* Tags */
+  /*  */
+  .tags {
+    @apply text-sm;
+    @apply text-gray-400;
+    @apply rounded-full;
+    border: 1px solid #9ca3af;
+    padding: 4px 8px;
+    margin: 3px 0 0 0;
+  }
+  .tags:hover {
+    text-decoration: none;
+  }
+
+  .tags {
+    margin-right: 10px;
+  }
+
+  /*  */
+  /* Footer */
+  /*  */
+  .post-footer {
+    margin-bottom: -10px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+  }
+
+  .footer-links a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #a78bfa;
+    margin: 0 2em 0 2em;
+  }
+
+  /*  */
+  /* Post Formatting */
+  /*  */
+  #post-title {
+    --ease: all 300ms ease;
+    z-index: 100;
+    background: pink;
+    height: 72px;
+    width: 100%;
+    opacity: 0.5;
+    transition: var(--ease);
+  }
+
+  .post-text p:nth-of-type(1) {
+    @apply text-purple-400;
+    @apply rounded-md;
+    @apply md:w-3/4;
+    @apply font-sans;
+    @apply text-base;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .post-text p:nth-of-type(2) {
+    border-top: 2px dotted;
+    @apply border-purple-300;
+    @apply pt-4;
+  }
+  .post-text p {
+    @apply font-serif;
+    @apply my-4;
+    line-height: 1.5;
+  }
+  .post-text h1 {
+    @apply md:text-3xl;
+    @apply text-3xl;
+  }
+  .post-text h2 {
+    @apply text-2xl;
+  }
+
+  .post-text h3 {
+    @apply text-xl;
+  }
+
+  .post-text h1,
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+  .post-text a {
+    @apply text-purple-400;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  .post-text blockquote {
+    @apply bg-purple-100;
+    @apply text-purple-600;
+    @apply rounded-md;
+    @apply py-1;
+    @apply px-2;
+    @apply mx-2;
+  }
+
+  .post-text code {
+    @apply bg-gray-100;
+    @apply rounded;
+    padding: 2px;
+  }
+
+  /*  */
+  /* Breadcrumbs */
+  /*  */
+  /* .breadcrumbs ul {
+    display: inline;
+  }
+  .breadcrumbs ul > li {
+    display: inline;
+  } */
+
+  /*  */
+  /*  */
+  /* hover.css custom styles */
+  .hvr-underline-from-left:before {
+    background: #1f2937 !important;
+  }
+
+  /*  */
+  /* Syntax Highlight */
+  /*  */
+  .post-text code {
+    font-family: "JetBrains Mono", monospace !important;
+    @apply text-base !important;
+  }
+  .post-text pre {
+    @apply rounded-md;
+  }
+}
