@@ -2,6 +2,8 @@ const htmlmin = require("html-minifier");
 const moment = require('moment');
 const typesetPlugin = require('eleventy-plugin-typeset');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginSass = require("eleventy-plugin-sass");
+
 
 moment.locale('en');
 
@@ -19,6 +21,7 @@ module.exports = function (eleventyConfig) {
     return moment(date).utc().format('LL'); // E.g. May 31, 2019
   });
   eleventyConfig.addPassthroughCopy({ "static": "/" });
+  eleventyConfig.addPassthroughCopy({ "styles": "/" });
   eleventyConfig.addPassthroughCopy({
     "node_modules/animate.css/animate.min.css": "assets/animate.min.css"
   });
@@ -32,8 +35,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(typesetPlugin({
     only: '.exerpt',
   }));
-
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginSass);
 
   // Shortcodes
 

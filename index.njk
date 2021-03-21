@@ -1,17 +1,17 @@
 ---
-layout: default.njk
+layout: base.njk
 pagination:
   data: collections.general
-  size: 3
+  size: 4
   reverse: true
   alias: posts
 ---
 
 {% block content %}
-  <div class="flex flex-col p-6 md:m-16 lg:grid lg:place-content-center">
+<div class="bg-purple-50 p-2 md:p-4 rounded-lg lg:w-2/3">
     <h1 class="text-4xl font-bold text-purple-400 animate__animated animate__flipInX">Hello!</h1>
-    <p class="text-gray-600 p-1 my-2 max-w-prose">
-      As a recently accredited AWS Solutions Architect, I thought it'd be beneficial to detail my journey through the ecosystem. From past experiences, I've discovered it's helpful when learning about things to write and teach other people about them. The goal for this web site is to be part journal, part instruction. I plan to document what I learn and what I know in an effort at improving my own understanding. Maybe if I do a good enough job, you'll learn something new!
+    <p class="text-gray-600 p-1 my-1 leading-5 max-w-prose">
+      As a recently accredited AWS Solutions Architect starting a career with the cloud, I thought it would be beneficial to detail my journey. From past experiences I discovered that writing about and teaching something to others is a great way to strengthen personal understanding. I've created this website to be part journal, part instruction. With the goal of improving my own understanding and hopefully helping others too along the way!
     </p>
     <h3 class="text-xl text-purple-400 p-1">
       Topics I write about
@@ -19,27 +19,9 @@ pagination:
     <ul class="text-gray-600 list-disc list-inside ml-4 font-mono">
       <li>Amazon Web Services</li>
       <li>Web development</li>
-      <li>Information security</li>
+      <li>Security</li>
       <li>Unix</li>
     </ul>
-    <p class="text-purple-400 text-xs uppercase mt-8 mb-4">Latest Posts</p>
-    {% for post in posts %}
-      <article class="mb-4">
-        <div class="flex flex-col items-baseline">
-          <h1 class="text-xl font-semibold hvr-underline-from-left text-gray-800">
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </h1>
-          <div class="flex flex-row items-center my-1">
-            <div class="text-gray-300 mr-2">
-              <img src="/images/calendar.svg" alt="Calendar icon">
-            </div>
-            <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
-          </div>
-        </div>
-        <div class="text-gray-500 md:w-1/2">
-          {% excerpt post %}
-        </div>
-      </article>
-    {% endfor %}
-  </div>
+</div>
+{% include "_includes/post-list.njk" %}
 {% endblock %}
