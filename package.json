@@ -12,18 +12,19 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
-    "@tailwindcss/postcss7-compat": "^2.0.4",
     "alpinejs": "^2.8.1",
     "animate.css": "^4.1.1",
-    "autoprefixer": "9",
     "clean-css-cli": "^5.2.0",
     "eleventy-plugin-sass": "^1.2.0",
     "eleventy-plugin-typeset": "github:liamfiddler/eleventy-plugin-typeset",
     "hover.css": "^2.3.2",
     "html-minifier": "^4.0.0",
     "moment": "^2.29.1",
-    "postcss": "8",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "^2.0.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8"
   }
 }
