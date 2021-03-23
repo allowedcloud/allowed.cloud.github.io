@@ -202,7 +202,8 @@ select { /* 1 */
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button {
+button,
+[type='button'] {
   -webkit-appearance: button;
 }
 
@@ -775,6 +776,10 @@ video {
   padding-bottom: 3rem;
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1075,7 +1080,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .post-text p:nth-of-type(1) {
-    width: 75%;
+    width: 60%;
   }
 }
 
