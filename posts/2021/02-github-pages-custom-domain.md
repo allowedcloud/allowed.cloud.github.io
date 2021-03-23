@@ -15,7 +15,7 @@ I wanted to document a problem that arises when deploying a website to [GitHub P
 
 ## GitHub Pages
 
-GitHub allows you to host a single website that by default is located at a subdomain of github.io. The name for the subdomain is your GitHub username. For example in my case, I have the username allowedcloud so my GitHub Pages subdomain will be allowedcloud.github.io. They also allow you to use your own domain name, which GitHub calls a custom domain. The settings for the custom domain can be configured in the repository's Settings page. When you set the custom domain through the GitHub web interface what happens is that GitHub automatically creates a file for you detailing that domain name and commits it to your repository. The file it creates is called CNAME, and it simply contains a single line with your custom domain name. Since my custom domain is allowed.cloud, my CNAME just contains allowed.cloud in it.
+GitHub allows you to host a single website that by default is located at a subdomain of `github.io`. The name for the subdomain is your GitHub username. For example in my case, I have the username allowedcloud so my GitHub Pages subdomain will be `allowedcloud.github.io`. They also allow you to use your own domain name, which GitHub calls a custom domain. The settings for the custom domain can be configured in the repository's Settings page. When you set the custom domain through the GitHub web interface Settings page what happens is that GitHub automatically creates a file for you detailing that domain name and commits it to your repository. The file it creates is called CNAME, and it simply contains a single line with your custom domain name. Since my custom domain is `allowed.cloud`, my CNAME contains `allowed.cloud` in it.
 
 ### Problem
 
@@ -29,7 +29,7 @@ I wouldn't even bother with the GitHub web interface because you can just create
 
 Now that I've given a bit of context, let's start from scratch to explain the whole process. There are essentially two steps, the first being to configure your DNS settings to point to GitHub IP address, the second being the creation of the CNAME file. My domain is registered on NameCheap but the DNS is being managed by CloudFlare. For the DNS settings of your domain, you need to add four A Records each with a different IP address. At the time of writing this, the IP addresses were:
 
-``` text
+``` **text**
 185.199.110.153
 185.199.111.153
 185.199.112.153
