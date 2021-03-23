@@ -11,7 +11,7 @@ layout: base.njk
         <div class="text-gray-300 mr-2">
           <img src="/images/calendar.svg" alt="Calendar icon">
         </div>
-        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ post.date | dateReadable }}</time>
+        <time datetime="{{ post.date | dateIso }}" class="text-gray-400 text-sm pt-1">{{ date | dateReadable }}</time>
       </div>
       <div class="flex mt-3">
         {% for tag in tags %}

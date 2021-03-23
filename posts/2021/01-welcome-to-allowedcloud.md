@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Welcome to Allowed Cloud
-date: 2021-03-16
+date: 2021-03-16 00:00:00
 tags: ['general']
 ---
 
