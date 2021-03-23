@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
     "node_modules/hover.css/css/hover-min.css": "assets/hover.css"
   });
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   // Plugins
 
