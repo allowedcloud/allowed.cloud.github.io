@@ -1229,8 +1229,8 @@ a:hover {
     padding: 4rem;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
+  .md\:w-3\/5 {
+    width: 60%;
   }
 }
 
