@@ -8,6 +8,7 @@ pagination:
 ---
 
 {% block content %}
+<div class="flex flex-grow flex-col p-6 md:m-16 lg:grid lg:place-content-center">
 <div class="bg-purple-50 p-2 md:p-4 rounded-lg lg:w-2/3">
     <h1 class="text-4xl font-bold text-purple-400 animate__animated animate__flipInX">Hello!</h1>
     <p class="text-gray-600 p-1 my-1 leading-5 max-w-prose">
@@ -25,3 +26,4 @@ pagination:
 </div>
 {% include "_includes/post-list.njk" %}
 {% endblock %}
+</div>

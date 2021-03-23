@@ -22,7 +22,7 @@
     {% block nav %}
       {% include "nav.njk" %}
     {% endblock %}
-    <div class="flex flex-grow flex-col p-6 md:m-16 lg:grid lg:place-content-center">
+    <div class="flex-grow">
       {% block content %}
         {{ content | safe }}
       {% endblock %}
