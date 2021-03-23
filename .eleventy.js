@@ -36,7 +36,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(typesetPlugin({
     only: '.exerpt',
   }));
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    lineSeparator: "\n",
+  });
   eleventyConfig.addPlugin(pluginSass);
 
   // Shortcodes
