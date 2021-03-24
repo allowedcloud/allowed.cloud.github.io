@@ -11,15 +11,15 @@ description: "How to configure a custom domain when deploying a website created 
 How to configure a custom domain when deploying a website created with Eleventy to GitHub Pages
 <!-- Excerpt End -->
 
-I wanted to document a problem that arises when deploying a website to [GitHub Pages](https://pages.github.com/) that uses a custom domain. This isn't something unique to the [Eleventy](https://11ty.dev) static site generator, and it's not necessarily a *problem* per se, just how things work. But it can cause some headaches initially when trying to figure out why your custom domain works and then doesn't work.
+I wanted to document a problem that arises when deploying a website to GitHub [Pages](https://pages.github.com/) that uses a custom domain. This isn't something unique to the [Eleventy](https://11ty.dev) static site generator, and it's not necessarily a *problem* per se, just how things work. But it can cause some headaches initially when trying to figure out why your custom domain works and then doesn't work.
 
 ## GitHub Pages
 
-GitHub allows you to host a single website that by default is located at a subdomain of `github.io`. The name for the subdomain is your GitHub username. For example in my case, I have the username allowedcloud so my GitHub Pages subdomain will be `allowedcloud.github.io`. They also allow you to use your own domain name, which GitHub calls a custom domain. The settings for the custom domain can be configured in the repository's Settings page. When you set the custom domain through the GitHub web interface Settings page what happens is that GitHub automatically creates a file for you detailing that domain name and commits it to your repository. The file it creates is called CNAME, and it simply contains a single line with your custom domain name. Since my custom domain is `allowed.cloud`, my CNAME contains `allowed.cloud` in it.
+GitHub allows you to host a single website that by default is located at a subdomain of `github.io`. The name assigned for the subdomain is your GitHub username. For example, I have the username allowedcloud so my GitHub Pages subdomain will be `allowedcloud.github.io`. They also allow you to use your own domain name, which GitHub calls a custom domain. The area to configure your custom domain is located in the Settings of your repository. What happens when you set the custom domain this way is that GitHub creates an actual file and commits it to branch that your GitHub Pages site is being served from. The file it creates is called CNAME, and it contains a single line with your custom domain name.
 
 ### Problem
 
-When using GitHub Pages and deploying your website with actions, the website is not being served from your main branch. Instead, when the action runs it drops all the output into a different branch. So when you update the custom domain through the web interface and the CNAME file is created, it is only added to this other branch that your website is being served from. Since your main branch does not contain the CNAME file, when you do a fresh deploy the file is not found in output. Which causes your custom domain settings to get wiped and your custom domain to no longer work.
+When using GitHub Pages and deploying your website with GitHub [Actions](https://github.com/features/actions), the website is not being served from your main branch. Instead, it is served from a different branch. When set the custom domain through the web interface, the `CNAME` file is only added to this different branch but not your main branch. Since your main branch does not contain the CNAME file, a fresh deploy wipes it out, in turn erasing your custom domain setting.
 
 ### Solution
 
@@ -40,7 +40,7 @@ For CloudFlare, I create a record **type** of A, the record **name** as allowed.
 
 <img src="/images/allowed-cloud-cloudflare-dns-settings.png" alt="DNS settings for Allowed Cloud on CloudFlare">
 
-Cool. That takes care of the first step, let's deal with the CNAME file. In your local repository create a file called CNAME, with no file extension. In it type in your custom domain on line 1 and save it. Now hop over to your Eleventy config file, mine is called `.eleventy.js`. We are going to use the `addPassthroughCopy` method to make sure that our CNAME file is carried over to the output directory when a build takes place.
+That takes care of the first step, let's deal with the `CNAME` file. In the root of your local repository create a file called `CNAME`, with no file extension. In it type in your custom domain on line 1 and save it. Now hop over to your Eleventy configuration file, mine is called `.eleventy.js`. We are going to use the `addPassthroughCopy` method to make sure that our `CNAME` file is carried over to the output directory when a build takes place.
 
 ``` javascript
 module.exports = function(eleventyConfig) {
@@ -48,4 +48,4 @@ eleventyConfig.addPassthroughCopy("CNAME");
 };
 ```
 
-You should be ready to rock! Now whenever you do a new push, and it triggers a build, the CNAME file won't get wiped every time you do a build.
+You should be ready to rock! Now whenever you do a new push, and it triggers a build, the `CNAME` file won't get wiped every time. The key to all of this is to make sure the `CNAME` file ends up in the output directory that your website is being served from. By default in Eleventy, the file will not be carried over to the output directory unless you add in a `addPassthroughCopy`. Once we added that line to our Eleventy configuration file, it was now being carried over to our output directory.
