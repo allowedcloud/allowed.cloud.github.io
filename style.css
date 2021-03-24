@@ -1248,6 +1248,10 @@ a:hover {
     place-content: center;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:w-2\/3 {
     width: 66.666667%;
   }
