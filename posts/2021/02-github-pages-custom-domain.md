@@ -29,7 +29,7 @@ I wouldn't even bother with the GitHub web interface because you can just create
 
 Now that I've given a bit of context, let's start from scratch to explain the whole process. There are essentially two steps, the first being to configure your DNS settings to point to GitHub IP address, the second being the creation of the CNAME file. My domain is registered on NameCheap but the DNS is being managed by CloudFlare. For the DNS settings of your domain, you need to add four A Records each with a different IP address. At the time of writing this, the IP addresses were:
 
-``` **text**
+``` text
 185.199.110.153
 185.199.111.153
 185.199.112.153
