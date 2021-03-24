@@ -40,7 +40,7 @@ For CloudFlare, I create a record **type** of A, the record **name** as allowed.
 
 <img src="/images/allowed-cloud-cloudflare-dns-settings.png" alt="DNS settings for Allowed Cloud on CloudFlare">
 
-Cool. That takes care of the first step, let's deal with the CNAME file. In your local repository create a file called CNAME, with no file extension. In it type in your custom domain on line 1 and save it. Now hop over to your Eleventy config file, mine is called .eleventy.js. We are going to use the addPassthroughCopy method to make sure that our CNAME file is carried over to the output directory when a build takes place.
+Cool. That takes care of the first step, let's deal with the CNAME file. In your local repository create a file called CNAME, with no file extension. In it type in your custom domain on line 1 and save it. Now hop over to your Eleventy config file, mine is called `.eleventy.js`. We are going to use the addPassthroughCopy method to make sure that our CNAME file is carried over to the output directory when a build takes place.
 
 ``` javascript
 module.exports = function(eleventyConfig) {
