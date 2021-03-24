@@ -49,5 +49,3 @@ eleventyConfig.addPassthroughCopy("CNAME");
 ```
 
 You should be ready to rock! Now whenever you do a new push, and it triggers a build, the CNAME file won't get wiped every time you do a build.
-
-This is a test.
