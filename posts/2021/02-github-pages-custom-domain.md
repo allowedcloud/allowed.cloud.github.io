@@ -2,7 +2,7 @@
 layout: post.njk
 title: GitHub Pages custom domain with Eleventy
 date: 2021-03-23 00:00:00
-tags: ['general']
+tags: ['general', 'web development', 'github']
 description: "How to configure a custom domain when deploying a website created with Eleventy to GitHub Pages"
 
 ---
