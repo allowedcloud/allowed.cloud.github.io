@@ -92,6 +92,10 @@
   /*  */
   /* Post Formatting */
   /*  */
+  .post-text img {
+    margin: 2em 0;
+  }
+
   #post-title {
     --ease: all 300ms ease;
     z-index: 100;
