@@ -1,10 +1,9 @@
-<div class="my-4">
-  <p class="text-purple-400 text-xs uppercase mt-4 mb-2">Latest Posts</p>
-  <div class="grid grid-cols-2 lg:w-2/3">
+  <div class="text-purple-800 text-sm uppercase font-bold mt-4 mb-2">Latest Posts</div>
+  <div class="grid md:grid-cols-2 lg:w-4/5">
   {% for post in posts %}
-        <article class="m-1">
+        <article class="my-2">
           <div class="flex flex-col items-baseline">
-            <h1 class="text-xl font-semibold hvr-underline-from-left text-gray-800 leading-6">
+            <h1 class="text-xl font-semibold text-gray-800 leading-6 underline">
               <a href="{{ post.url | url }}">{{ post.data.title }}</a>
             </h1>
             <div class="flex flex-row items-center my-1">
@@ -20,4 +19,3 @@
         </article>
   {% endfor %}
   </div>
-</div>

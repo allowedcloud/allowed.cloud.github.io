@@ -8,7 +8,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
       <link rel="stylesheet" href="/style.css?v={% version %}"/>
-      <link rel="stylesheet" href="/styles/base.css" />
+      <link rel="stylesheet" href="/styles/main.css" />
       <link rel="stylesheet" href="{{" /assets/animate.min.css" | url }}"/>
       <link rel="stylesheet" href="{{" /assets/hover.css" | url }}"/>
       <link rel="stylesheet" href="/prism-material-light.css">
@@ -18,17 +18,19 @@
       {# <script src="/scroll-progress.js"></script> #}
       {% block head %}{% endblock %}
   </head>
-  <body class="flex flex-col h-screen">
-    {% block nav %}
-      {% include "nav.njk" %}
-    {% endblock %}
-    <div class="flex-grow">
-      {% block content %}
-        {{ content | safe }}
+  <body>
+    <div id="base-wrapper" class="flex flex-col h-screen">
+      {% block nav %}
+        {% include "nav.njk" %}
       {% endblock %}
-    </div>
-    {% block footer %}
-      {% include "footer.njk" %}
-    {% endblock %}
+      <div class="flex-grow grid place-content-center p-4">
+        {% block content %}
+          {{ content | safe }}
+        {% endblock %}
+      </div>
+      {% block footer %}
+        {% include "footer.njk" %}
+      {% endblock %}
+  </div>
   </body>
 </html>

@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 <div id="content" class="grid">
-  <article class="grid place-content-center text-lg p-4 md:p-16 z-20 pb-12 mb-48 bg-white">
+  <article class="">
     <h1 class="post-title text-2xl md:text-3xl">
       {{ title }}
     </h1>
@@ -25,39 +25,4 @@ layout: base.njk
       {{ content | safe }}
     </div>
   </article>
-  <footer class="post-footer h-52 bottom-0 z-0 py-4 bg-gray-50 shadow-inner">
-    <div class="grid grid-cols-4 h-40 place-items-center">
-      <div></div>
-
-      <div class="grid grid-row text-gray-400 text-xl underline">
-        <a href="/" title="Home">Home</a>
-        <a href="/posts" title="Posts">Posts</a>
-        <a href="/about" title="About">About</a>
-      </div>
-      <div class="flex">
-        <a href="https://github.com/allowedcloud" title="Github" target="_blank" class="px-1">
-          <img src="/images/github.svg" alt="Github">
-        </a>
-        <a href="https://twitter.com/allowedcloud" title="Twitter" target="_blank" class="px-1">
-          <img src="/images/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com/" title="LinkedIn" target="_blank" class="px-1">
-          <img src="/images/linkedin.svg" alt="LinkedIn">
-        </a>
-        <a href="mailto:allowedcloud@gmail.com" title="Email" class="px-1">
-          <img src="/images/mail.svg" alt="Email">
-        </a>
-    </div>
-    <div></div>
-  </div>
-    </div>
-    <div class="fixed bottom-2 w-full text-center text-gray-300">
-      <p class="text-sm">
-        Allowed Cloud · 2021
-      </p>
-    </div>
-  </footer>
-  <div class="progress-container fixed bottom-0 z-50">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
 </div 
