@@ -182,7 +182,8 @@
   /*  */
   .post-text code {
     font-family: "JetBrains Mono", monospace !important;
-    @apply text-base !important;
+    @apply md:text-base !important;
+    @apply text-xs !important;
   }
   .post-text pre {
     @apply rounded-md;

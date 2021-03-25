@@ -694,6 +694,10 @@ video {
   margin-left: 1rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .max-w-prose {
   max-width: 65ch;
 }
@@ -1065,10 +1069,6 @@ a:hover {
 
 /* hover.css custom styles */
 
-.hvr-underline-from-left:before {
-  background: #1f2937 !important;
-}
-
 /*  */
 
 /* Syntax Highlight */
@@ -1077,8 +1077,18 @@ a:hover {
 
 .post-text code {
   font-family: "JetBrains Mono", monospace !important;
-  font-size: 1rem !important;
-  line-height: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .post-text code {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+}
+
+.post-text code {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
 }
 
 .post-text pre {
